@@ -7,20 +7,20 @@ const initialState = {
     courses: []
 };
 
-// Reducer
+// Regular Reducer
 function reducer(state = initialState, action) {
     switch(action.type) {
         case ADD_COURSE:
             return {
                 ...state,
-                courses: action.payload
+                courses: [action.payload]
             };
         default: 
             return state;
     }
 }
 
-// // Immer Reducer
+// Immer Reducer
 // const reducer = produce((draft, action) => {
 //     switch(action.type) {
 //         case ADD_COURSE:
