@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addCourse } from '../actions';
+import './courseListPage.css'
 
 const CourseListPage = ({ courses, dispatch }) => {
     // Create a new piece of local state for the input (using React Hooks)
@@ -13,7 +14,7 @@ const CourseListPage = ({ courses, dispatch }) => {
 
     return (
         courses.length === 0 ? (
-            <div>
+            <div className="CreateCourse">
                 <h1>Create Your First Course</h1>
                 <form onSubmit={handleSubmit}>
                     <label>
