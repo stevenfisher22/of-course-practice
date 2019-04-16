@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 // Components
 import reducer from './reducer';
+import App from './App';
 
 // CSS
 import './index.css';
@@ -18,15 +19,6 @@ import './index.css';
 const store = createStore(reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({ trace: true })
 );
-
-// Main App
-function App() {
-    return (
-        <div>
-            Test
-        </div>
-    )
-}
 
 ReactDOM.render(
     <Provider store={store}>
