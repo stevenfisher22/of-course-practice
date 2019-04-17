@@ -1,5 +1,5 @@
 // Imports
-import { ADD_COURSE } from './actions';
+import { ADD_COURSE_BEGIN, ADD_COURSE_SUCCESS, ADD_COURSE_ERROR } from './actions';
 import produce from 'immer';
 
 // Initial State
@@ -10,7 +10,7 @@ const initialState = {
 // Regular Reducer
 function reducer(state = initialState, action) {
     switch(action.type) {
-        case ADD_COURSE:
+        case ADD_COURSE_SUCCESS:
             return {
                 ...state,
                 courses: [action.payload]
